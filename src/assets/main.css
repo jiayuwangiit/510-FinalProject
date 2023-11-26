@@ -2,9 +2,43 @@
 .styled-button {
     -fx-background-color: #3498db;
     -fx-text-fill: #ffffff;
-    -fx-font-size: 14pt;
+    -fx-font-size: 12pt;
     -fx-border-color: #2980b9;
+    -fx-border-width: 2;
+    -fx-border-radius: 2;
+    -fx-cursor: hand;
+}
+
+.styled-button2 {
+    -fx-background-color: #3498db;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 10pt;
+    -fx-border-color: #2980b9;
+    -fx-border-width: 1;
+    -fx-border-radius: 1;
+    -fx-cursor: hand;
+}
+
+.styled-button2-wring {
+    -fx-background-color: #ff6666;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 10pt;
+    -fx-border-color: #ff9966;
+    -fx-border-width: 1;
+    -fx-border-radius: 1;
+    -fx-cursor: hand;
+}
+
+.styled-text {
+    -fx-font-size: 14pt;
+    -fx-background-color: #cccccc;
+    -fx-text-fill: #ffffff;
     -fx-border-width: 2;
     -fx-border-radius: 5;
     -fx-cursor: hand;
+
+}
+.login-title-label{
+    -fx-start-margin: 390;
+    -fx-font-size: 18pt;
 }

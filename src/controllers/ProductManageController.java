@@ -96,6 +96,7 @@ public class ProductManageController {
                 Parent root = loader.load();
                 Main.stage.setTitle("Add product View");
                 Scene scene = new Scene(root);
+                scene.getStylesheets().add(getClass().getResource("/assets/main.css").toExternalForm());
                 Main.stage.setScene(scene);
 
                 ProductManageController controller = loader.getController();
@@ -118,6 +119,7 @@ public class ProductManageController {
             root = (AnchorPane) FXMLLoader.load(getClass().getResource("/views/AddProduct.fxml"));
             Main.stage.setTitle("Add product View");
             Scene scene = new Scene(root);
+            scene.getStylesheets().add(getClass().getResource("/assets/main.css").toExternalForm());
             Main.stage.setScene(scene);
 
         } catch (Exception e) {
@@ -134,6 +136,7 @@ public class ProductManageController {
             root = (AnchorPane) FXMLLoader.load(getClass().getResource("/views/AdminView.fxml"));
             Main.stage.setTitle("Product Stock Manage System - Admin View - JiaYu Wang");
             Scene scene = new Scene(root);
+            scene.getStylesheets().add(getClass().getResource("/assets/main.css").toExternalForm());
             Main.stage.setScene(scene);
         } catch (Exception e) {
             System.out.println("Error occured while inflating view: " + e);
@@ -155,6 +158,7 @@ public class ProductManageController {
             root = (AnchorPane) FXMLLoader.load(getClass().getResource("/views/AdminView.fxml"));
             Main.stage.setTitle("Admin View");
             Scene scene = new Scene(root);
+            scene.getStylesheets().add(getClass().getResource("/assets/main.css").toExternalForm());
             Main.stage.setScene(scene);
         }catch (Exception e){
             System.out.println("Error: " + e);

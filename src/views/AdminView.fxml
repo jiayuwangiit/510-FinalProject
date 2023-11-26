@@ -7,20 +7,20 @@
 <?import javafx.scene.layout.HBox?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
-            minHeight="-Infinity" minWidth="-Infinity" prefHeight="489.0" prefWidth="699.0"
+            minHeight="-Infinity" minWidth="-Infinity" prefHeight="600" prefWidth="850"
             xmlns:fx="http://javafx.com/fxml/1"
             xmlns="http://javafx.com/javafx/8.0.171"
             fx:controller="controllers.ProductManageController"
 >
-    <Button fx:id="addBtn" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Add product" onAction="#goToAddProductPage"/>
-    <Button fx:id="deleteButton" layoutX="115.0" layoutY="14.0" mnemonicParsing="false" text="Delete Selected Product" onAction="#deleteSelectRowRow"/>
-    <Button fx:id="editButton" layoutX="285.0" layoutY="14.0" mnemonicParsing="false" text="Edit Selected Product" onAction="#editProduct"/>
-    <TableView fx:id="productsTableView" layoutX="14.0" layoutY="45.0" prefHeight="425.0" prefWidth="678.0">
+    <Button fx:id="addBtn" layoutX="5" layoutY="14.0" mnemonicParsing="false" text="Add product" onAction="#goToAddProductPage" styleClass="styled-button2"/>
+    <Button fx:id="editButton" layoutX="115.0" layoutY="14.0" mnemonicParsing="false" text="Edit Selected Product" onAction="#editProduct" styleClass="styled-button2"/>
+    <Button fx:id="deleteButton" layoutX="280.0" layoutY="14.0" mnemonicParsing="false" text="Delete Selected Product" onAction="#deleteSelectRowRow" styleClass="styled-button2-wring"/>
+    <TableView fx:id="productsTableView" layoutX="5" layoutY="55.0" prefHeight="550" prefWidth="840">
         <columns>
-            <TableColumn fx:id="idColumn" prefWidth="65.0" text="ID"/>
-            <TableColumn fx:id="nameColumn" prefWidth="275.0" text="Name"/>
-            <TableColumn fx:id="priceColumn" prefWidth="100.0" text="Price"/>
-            <TableColumn fx:id="stockColumn" prefWidth="100.0" text="Stock"/>
+            <TableColumn fx:id="idColumn" prefWidth="80.0" text="ID"/>
+            <TableColumn fx:id="nameColumn" prefWidth="530.0" text="Name"/>
+            <TableColumn fx:id="priceColumn" prefWidth="135.0" text="Price"/>
+            <TableColumn fx:id="stockColumn" prefWidth="135.0" text="Stock"/>
         </columns>
     </TableView>
 </AnchorPane>

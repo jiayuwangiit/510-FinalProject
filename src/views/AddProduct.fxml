@@ -6,16 +6,19 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="328.0"
-            prefWidth="397.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="380"
+            prefWidth="500" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="controllers.ProductManageController"
 >
-    <TextField layoutX="168.0" layoutY="101.0" fx:id="nameText"/>
-    <Label layoutX="47.0" layoutY="105.0" text="Product Name:"/>
-    <Label layoutX="47.0" layoutY="149.0" text="Sale Price:" />
-    <TextField layoutX="168.0" layoutY="145.0" fx:id="priceText"/>
-    <Label layoutX="47.0" layoutY="193.0" text="Stock:"/>
-    <TextField layoutX="168.0" layoutY="189.0" fx:id="stockText"/>
-    <Button layoutX="109.0" layoutY="286.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="79.0" text="Cancel" onAction="#goToProductManagePage"/>
-    <Button layoutX="209.0" layoutY="286.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="Save" onAction="#saveProduct"/>
+    <Label layoutX="47.0" layoutY="85.0" text="Product Name:"/>
+    <TextField layoutX="168.0" layoutY="75.0" fx:id="nameText" styleClass="styled-text"/>
+
+    <Label layoutX="47.0" layoutY="125.0" text="Sale Price:" />
+    <TextField layoutX="168.0" layoutY="115.0" fx:id="priceText" styleClass="styled-text"/>
+
+    <Label layoutX="47.0" layoutY="165.0" text="Stock:"/>
+    <TextField layoutX="168.0" layoutY="159.0" fx:id="stockText" styleClass="styled-text"/>
+
+    <Button layoutX="139.0" layoutY="286.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="79.0" text="Cancel" onAction="#goToProductManagePage" styleClass="styled-button2-wring"/>
+    <Button layoutX="239.0" layoutY="286.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="Save" onAction="#saveProduct" styleClass="styled-button2"/>
 </AnchorPane>
