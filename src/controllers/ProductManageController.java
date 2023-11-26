@@ -151,8 +151,6 @@ public class ProductManageController {
             }else{
                 productModel.updateProduct(selectedProduct.getId(), name, price, stock);
             }
-
-
             AnchorPane root;
             root = (AnchorPane) FXMLLoader.load(getClass().getResource("/views/AdminView.fxml"));
             Main.stage.setTitle("Admin View");
@@ -162,8 +160,4 @@ public class ProductManageController {
             System.out.println("Error: " + e);
         }
     }
-
-
-
-
 }
