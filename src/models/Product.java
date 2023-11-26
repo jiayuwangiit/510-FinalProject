@@ -1,8 +1,6 @@
 package models;
 
-import javafx.beans.property.SimpleFloatProperty;
-import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.*;
 
 public class Product {
     private final SimpleIntegerProperty  id;
@@ -11,13 +9,16 @@ public class Product {
 
     private final SimpleFloatProperty price;
 
-    private final SimpleIntegerProperty  stock;
+    private final SimpleIntegerProperty stock;
+
+    private final SimpleBooleanProperty select;
 
     public Product(Integer id, String name, Float price,Integer stock) {
         this.id = new SimpleIntegerProperty(id);
         this.name = new SimpleStringProperty(name);
         this.price = new SimpleFloatProperty(price);
         this.stock = new SimpleIntegerProperty(stock);
+        this.select = new SimpleBooleanProperty(false);
     }
 
     public void setId(Integer id) {
@@ -50,5 +51,27 @@ public class Product {
 
     public Integer getStock() {
         return stock.get();
+    }
+
+    public IntegerProperty idProperty() {
+        return id;
+    }
+
+    public StringProperty nameProperty() {
+        return name;
+    }
+    public FloatProperty priceProperty() {
+        return price;
+    }
+    public IntegerProperty stockProperty() {
+        return stock;
+    }
+
+    public Boolean isSelected(){
+        return this.select.getValue();
+    }
+
+    public void setSelected(Boolean newValue){
+        this.select.set(newValue);
     }
 }

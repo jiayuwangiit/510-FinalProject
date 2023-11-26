@@ -17,5 +17,5 @@
     <Label layoutX="47.0" layoutY="193.0" text="Stock:"/>
     <TextField layoutX="168.0" layoutY="189.0" fx:id="stockText"/>
     <Button layoutX="109.0" layoutY="286.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="79.0" text="Cancel" onAction="#goToProductManagePage"/>
-    <Button layoutX="209.0" layoutY="286.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="Add" onAction="#createProduct"/>
+    <Button layoutX="209.0" layoutY="286.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="88.0" text="Save" onAction="#saveProduct"/>
 </AnchorPane>

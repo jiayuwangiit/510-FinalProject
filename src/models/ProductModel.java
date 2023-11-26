@@ -23,7 +23,19 @@ public class ProductModel extends DBConnect {
             stmt.setFloat(2, price);
             stmt.setInt(3, stock);
             stmt.executeUpdate();
-            connection.close();
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void updateProduct(Integer id, String name, Float price, Integer stock){
+        String sql = "update `jiayuw_products` set `name`=?,`price`=?,`stock`=? where id=?;";
+        try(PreparedStatement stmt = connection.prepareStatement(sql)) {
+            stmt.setString(1, name);
+            stmt.setFloat(2, price);
+            stmt.setInt(3, stock);
+            stmt.setInt(4, id);
+            stmt.executeUpdate();
         }catch (SQLException e) {
             e.printStackTrace();
         }
@@ -31,9 +43,6 @@ public class ProductModel extends DBConnect {
 
     public ArrayList<Product> getProducts(){
         ArrayList<Product> productModels = new ArrayList<Product>();
-
-
-
         try{
             Statement stmt = connection.createStatement();
             String sql = "SELECT * from `jiayuw_products` order by id desc";
@@ -48,13 +57,22 @@ public class ProductModel extends DBConnect {
 
                 productModels.add(product);
             }
-            connection.close();
         }catch (SQLException exception){
             exception.printStackTrace();
         }
-
-
-
         return productModels;
+    }
+
+    public Boolean deleteProduct(Integer id)
+    {
+        String sql = "Delete from `jiayuw_products` where id=? limit 1;";
+        try(PreparedStatement stmt = connection.prepareStatement(sql)) {
+            stmt.setInt(1, id);
+            stmt.executeUpdate();
+            return true;
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 }
