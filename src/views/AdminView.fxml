@@ -12,12 +12,12 @@
             fx:controller="controllers.ProductManageController"
 >
     <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Add product" onAction="#goToAddProductPage"/>
-    <TableView layoutX="14.0" layoutY="45.0" prefHeight="425.0" prefWidth="678.0">
+    <TableView fx:id="tableView" layoutX="14.0" layoutY="45.0" prefHeight="425.0" prefWidth="678.0">
         <columns>
-            <TableColumn prefWidth="75.0" text="ID" />
-            <TableColumn prefWidth="75.0" text="Name" />
-            <TableColumn prefWidth="75.0" text="Price" />
-            <TableColumn prefWidth="75.0" text="Stock" />
+            <TableColumn prefWidth="75.0" text="ID" fx:id="idColumn"/>
+            <TableColumn prefWidth="75.0" text="Name" fx:id="nameColumn"/>
+            <TableColumn prefWidth="75.0" text="Price" fx:id="priceColumn"/>
+            <TableColumn prefWidth="75.0" text="Stock" fx:id="stockColumn"/>
         </columns>
     </TableView>
 </AnchorPane>
