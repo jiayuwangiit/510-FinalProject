@@ -80,8 +80,9 @@ public class ProductModel extends DBConnect {
         return false;
     }
 
-    public Boolean createOrder(ObservableList<Product> products ){
+    public Boolean createOrder(ObservableList<Product> products ) throws SQLException {
         try{
+            connection.setAutoCommit(false);
             String reduceSql = "update `jiayuw_products` set `stock`=`stock`-1 where id=?";
 
             //Create order
@@ -128,8 +129,10 @@ public class ProductModel extends DBConnect {
                stmt.setInt(1, id);
                stmt.executeUpdate();
             }
+            connection.commit();
             return true;
         }catch (Exception exception){
+            connection.rollback();
             exception.printStackTrace();
             return false;
         }

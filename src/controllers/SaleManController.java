@@ -13,6 +13,8 @@ import javafx.scene.layout.AnchorPane;
 import models.Product;
 import models.ProductModel;
 
+import java.sql.SQLException;
+
 public class SaleManController {
 
 
@@ -137,7 +139,7 @@ public class SaleManController {
     }
 
 
-    public void checkoutNow(){
+    public void checkoutNow() throws SQLException {
         if(!this.selectedProductList.isEmpty()){
 
             productModel.createOrder(selectedProductList);
