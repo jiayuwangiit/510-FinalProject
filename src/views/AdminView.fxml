@@ -15,6 +15,7 @@
     <Button fx:id="addBtn" layoutX="5" layoutY="14.0" mnemonicParsing="false" text="Add product" onAction="#goToAddProductPage" styleClass="styled-button2"/>
     <Button fx:id="editButton" layoutX="115.0" layoutY="14.0" mnemonicParsing="false" text="Edit Selected Product" onAction="#editProduct" styleClass="styled-button2"/>
     <Button fx:id="deleteButton" layoutX="280.0" layoutY="14.0" mnemonicParsing="false" text="Delete Selected Product" onAction="#deleteSelectRowRow" styleClass="styled-button2-wring"/>
+    <Button layoutX="460.0" layoutY="14.0" mnemonicParsing="false" text="Product Log" onAction="#goToProductLogPage" styleClass="styled-button2"/>
     <TableView fx:id="productsTableView" layoutX="5" layoutY="55.0" prefHeight="550" prefWidth="840">
         <columns>
             <TableColumn fx:id="idColumn" prefWidth="80.0" text="ID"/>

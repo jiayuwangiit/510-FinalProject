@@ -100,16 +100,11 @@ public class ProductModel extends DBConnect {
             for (Product productItem : products) {
                 int id = productItem.getId();
 
-
-
                 String query = "SELECT * FROM jiayuw_products WHERE id = ? limit 1;";
                 PreparedStatement stmtP = connection.prepareStatement(query);
                 stmtP.setInt(1, id);
                 ResultSet rs = stmtP.executeQuery();
                 if(rs.next()) {
-
-
-
 
                     int oldStock = rs.getInt("stock");
                     int newStock = oldStock-1;

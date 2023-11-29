@@ -84,8 +84,13 @@ public class ProductManageController {
 
     public void deleteSelectRowRow(){
         Product selectedProduct = productsTableView.getSelectionModel().getSelectedItem();
-        productModel.deleteProduct(selectedProduct.getId());
-        productsTableView.getItems().remove(selectedProduct);
+        if(selectedProduct!=null){
+            productModel.deleteProduct(selectedProduct.getId());
+            productsTableView.getItems().remove(selectedProduct);
+        }else{
+            this.alert("Please select product first!");
+        }
+
     }
 
     public void editProduct(){
@@ -104,6 +109,8 @@ public class ProductManageController {
                 controller.nameText.setText(controller.selectedProduct.getName());
                 controller.priceText.setText(controller.selectedProduct.getPrice().toString());
                 controller.stockText.setText(controller.selectedProduct.getStock().toString());
+            }else{
+                this.alert("Please select product first!");
             }
 
         } catch (Exception e) {
@@ -163,5 +170,36 @@ public class ProductManageController {
         }catch (Exception e){
             System.out.println("Error: " + e);
         }
+    }
+
+    public void goToProductLogPage(){
+
+        try {
+            if(selectedProduct!=null){
+                System.out.println("Selected id:"+selectedProduct.getId());
+            }
+
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/ProductLog.fxml"));
+            Parent root = loader.load();
+            Main.stage.setTitle("Product Stock Manage System - Product Log View - JiaYu Wang");
+            Scene scene = new Scene(root);
+            scene.getStylesheets().add(getClass().getResource("/assets/main.css").toExternalForm());
+            Main.stage.setScene(scene);
+
+            ProductLogController controller = loader.getController();
+            controller.isAdmin = true;
+
+        } catch (Exception e) {
+            System.out.println("Error occured while inflating view: " + e);
+        }
+    }
+
+    private void alert(String message){
+        Alert alert = new Alert(Alert.AlertType.WARNING);
+        alert.setTitle("WARNING");
+        alert.setHeaderText(null);
+        alert.setContentText("oOps! "+message);
+        alert.showAndWait();
     }
 }

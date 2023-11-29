@@ -169,7 +169,26 @@ public class SaleManController {
 
 
 
+    public void goToProductLogPage(){
 
+        try {
+            if(selectedProduct!=null){
+                System.out.println("Selected id:"+selectedProduct.getId());
+            }
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/ProductLog.fxml"));
+            Parent root = loader.load();
+            Main.stage.setTitle("Product Stock Manage System - Product Log View - JiaYu Wang");
+            Scene scene = new Scene(root);
+            scene.getStylesheets().add(getClass().getResource("/assets/main.css").toExternalForm());
+            Main.stage.setScene(scene);
+
+            ProductLogController controller = loader.getController();
+            controller.isAdmin = false;
+
+        } catch (Exception e) {
+            System.out.println("Error occured while inflating view: " + e);
+        }
+    }
 
 
 }
