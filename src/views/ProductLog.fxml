@@ -11,7 +11,7 @@
 <AnchorPane prefHeight="435.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ProductLogController">
     <Button fx:id="queryBtn" layoutX="531.0" layoutY="14.0" mnemonicParsing="false" onAction="#queryLogs" text="Query" />
     <TextField fx:id="keywordText" layoutX="363.0" layoutY="14.0" />
-    <Label layoutX="300.0" layoutY="18.0" text="Keyword:" />
+    <Label layoutX="300.0" layoutY="18.0" text="Product ID:" />
     <Line endX="100.0" layoutX="481.0" layoutY="48.0" startX="-470.0" />
     <TableView fx:id="tableView" layoutX="11.0" layoutY="55.0" prefHeight="372.0" prefWidth="671.0">
       <columns>
