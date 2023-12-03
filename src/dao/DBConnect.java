@@ -12,9 +12,9 @@ public class DBConnect {
         return connection;
     }
 
-    private static String url = "jdbc:mysql://127.0.0.1:3306/510labs";
-    private static String username = "root";
-    private static String password = "";
+    private static String url = "jdbc:mysql://www.papademas.net:3307/510fp?autoReconnect=true&useSSL=false";
+    private static String username = "fp510";
+    private static String password = "510";
 
     public DBConnect() {
         try {
